@@ -4,45 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Changelog</title>
+
 <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #111;
-        color: #fff;
+        background-color: #0d0d0f; /* your site background */
+        color: white;
         display: flex;
     }
 
     /* Sidebar */
     .sidebar {
-        width: 250px;
-        background: #181818;
+        width: 260px;
+        background: #151518; /* dark card color */
         height: 100vh;
         padding: 20px;
         box-sizing: border-box;
-        border-right: 2px solid #222;
+        border-right: 2px solid #1f1f22;
     }
 
     .sidebar h2 {
-        margin-top: 0;
-        margin-bottom: 15px;
-        font-size: 22px;
         text-align: center;
+        margin-top: 0;
+        font-size: 24px;
+        color: #4da3ff; /* your accent blue */
     }
 
     .sidebar a {
         display: block;
-        background: #222;
-        margin: 8px 0;
-        padding: 10px;
-        border-radius: 6px;
-        text-decoration: none;
+        background: #1c1c20;
         color: white;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 10px;
+        text-decoration: none;
         transition: 0.2s;
+        border: 1px solid #232327;
     }
 
     .sidebar a:hover {
-        background: #333;
+        background: #242428;
+    }
+
+    .home-btn {
+        background: #004aad !important;
+        border: 1px solid #003f94 !important;
+        text-align: center;
+    }
+
+    .home-btn:hover {
+        background: #0058c4 !important;
     }
 
     /* Main content */
@@ -53,23 +65,19 @@
     }
 
     h2 {
-        margin-top: 0;
         font-size: 28px;
+        color: #4da3ff; /* accent blue */
     }
 
     h3 {
-        margin-bottom: 5px;
-        margin-top: 25px;
         font-size: 20px;
-        color: #0af;
+        margin-top: 30px;
+        color: #4da3ff;
     }
 
-    ol {
-        margin-left: 20px;
-    }
-
-    p {
-        line-height: 1.5em;
+    p, li {
+        font-size: 16px;
+        line-height: 1.6;
     }
 
 </style>
@@ -79,59 +87,65 @@
 <!-- Sidebar -->
 <div class="sidebar">
     <h2>Changelogs</h2>
+
     <a href="#" onclick="showLog('v11')">v1.1 — 11/14/2025</a>
 
     <br><br>
-    <a href="https://codingiscool464.github.io" style="background:#0a0;">⬅ Back to Home</a>
+
+    <a class="home-btn" href="https://codingiscool464.github.io">⬅ Back to Home</a>
 </div>
 
-<!-- Main Content -->
+<!-- Content -->
 <div class="content" id="content">
     <h2>Select a changelog from the left.</h2>
 </div>
 
 <script>
-    function showLog(version) {
-        let content = document.getElementById("content");
+function showLog(version) {
 
-        if (version === "v11") {
-            content.innerHTML = `
-                <h2>v1.1 — 11/14/2025</h2>
-                <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
+    let content = document.getElementById("content");
 
-                <h3>GAME ADDITIONS:</h3>
-                <ol>
-                    <li>Drive Mad</li>
-                    <li>Drift Boss</li>
-                </ol>
+    if (version === "v11") {
 
-                <h3>OTHER ADDITIONS:</h3>
-                <ol>
-                    <li>Added suggestions form for visitors to express their thoughts on the site.</li>
-                    <li>Added update countdown for our weekly updates.</li>
-                    <li>Added this changelog page!</li>
-                </ol>
+        content.innerHTML = `
+            <h2>v1.1 — 11/14/2025</h2>
 
-                <h3>NOTES FROM THE OWNER:</h3>
-                <p>weekly updates will now occur on Fridays at 1pm<br>
-                (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
+            <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
 
-                <p>i might start doing taco tuesday updates if i have time</p>
+            <h3>GAME ADDITIONS:</h3>
+            <ol>
+                <li>Drive Mad</li>
+                <li>Drift Boss</li>
+            </ol>
 
-                <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
+            <h3>OTHER ADDITIONS:</h3>
+            <ol>
+                <li>Added suggestions form for visitors to express their thoughts on the site.</li>
+                <li>Added update countdown for our weekly updates.</li>
+                <li>Added this changelog page!</li>
+            </ol>
 
-                <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
+            <h3>NOTES FROM THE OWNER:</h3>
 
-                <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
+            <p>weekly updates will now occur on Fridays at 1pm<br>
+            (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
 
-                <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
+            <p>i might start doing taco tuesday updates if i have time</p>
 
-                <p>so grateful for all of you supporting this and i will see you next update!</p>
+            <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
 
-                <p>-WM</p>
-            `;
-        }
+            <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
+
+            <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
+
+            <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
+
+            <p>so grateful for all of you supporting this and i will see you next update!</p>
+
+            <p>-WM</p>
+        `;
     }
+}
 </script>
 
 </body>
