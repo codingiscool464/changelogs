@@ -50,9 +50,14 @@
     margin-bottom:10px;
     border:1px solid #2c3440;
     transition:0.18s ease;
+    cursor:pointer;
   }
 
-  .version-link:hover{ background:var(--card-hover); transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+  .version-link:hover{
+    background:var(--card-hover);
+    transform:translateY(-2px);
+    box-shadow:0 6px 18px rgba(0,209,255,0.06);
+  }
 
   .home-btn{
     display:block;
@@ -65,7 +70,10 @@
     text-decoration:none;
     border:1px solid #2c3440;
   }
-  .home-btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+  .home-btn:hover{
+    background:var(--card-hover);
+    box-shadow:0 6px 18px rgba(0,209,255,0.06);
+  }
 
   /* Content */
   .content{
@@ -74,13 +82,20 @@
     overflow-y:auto;
   }
 
+  .log { display:none; }
+
   h1{
     font-size:2rem;
     color:var(--accent);
     margin-bottom:8px;
   }
 
-  h3{ color:var(--accent); margin-top:22px; margin-bottom:8px; font-size:1.05rem; }
+  h3{
+    color:var(--accent);
+    margin-top:22px;
+    margin-bottom:8px;
+    font-size:1.05rem;
+  }
 
   p, li{
     color:var(--text);
@@ -105,7 +120,10 @@
     border:1px solid #2c3440;
     font-weight:600;
   }
-  .btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+  .btn:hover{
+    background:var(--card-hover);
+    box-shadow:0 6px 18px rgba(0,209,255,0.06);
+  }
 
   @media (max-width:800px){
     .sidebar{ display:none; }
@@ -120,65 +138,78 @@
   <div class="sidebar" role="navigation" aria-label="Changelog versions">
     <h2>Changelogs</h2>
 
-    <a class="version-link" href="#" onclick="showLog('v11'); return false;">v1.1 — 11/14/2025</a>
+    <!-- Version Selectors -->
+    <a class="version-link" onclick="showLog('v11')">v1.1 — 11/14/2025</a>
 
     <a class="home-btn" href="https://codingiscool464.github.io" target="_blank">⬅ Back to Home</a>
   </div>
 
   <!-- Main content -->
   <main class="content" id="content" role="main" tabindex="0">
+
+    <!-- Top Navigation -->
     <div class="top-links">
       <a class="btn" href="https://codingiscool464.github.io/suggestionform/" target="_blank">Suggestions</a>
       <a class="btn" href="https://codingiscool464.github.io/updatecountdown" target="_blank">Update Countdown</a>
     </div>
 
-    <h1>v1.1 — 11/14/2025</h1>
+    <!-- CHANGELOG: v1.1 -->
+    <section class="log" id="v11">
+      <h1>v1.1 — 11/14/2025</h1>
 
-    <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
+      <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
 
-    <h3>GAME ADDITIONS:</h3>
-    <ol>
-      <li>Drive Mad</li>
-      <li>Drift Boss</li>
-    </ol>
+      <h3>GAME ADDITIONS:</h3>
+      <ol>
+        <li>Drive Mad</li>
+        <li>Drift Boss</li>
+      </ol>
 
-    <h3>OTHER ADDITIONS:</h3>
-    <ol>
-      <li>Added suggestions form for visitors to express their thoughts on the site.</li>
-      <li>Added update countdown for our weekly updates.</li>
-      <li>Added this changelog page!</li>
-    </ol>
+      <h3>OTHER ADDITIONS:</h3>
+      <ol>
+        <li>Added suggestions form for visitors to express their thoughts on the site.</li>
+        <li>Added update countdown for our weekly updates.</li>
+        <li>Added this changelog page!</li>
+      </ol>
 
-    <h3>NOTES FROM THE OWNER:</h3>
-    <p>weekly updates will now occur on Fridays at 1pm<br>
-    (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
+      <h3>NOTES FROM THE OWNER:</h3>
+      <ul>
+        <li>weekly updates will now occur on Fridays at 1pm<br>
+        (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</li>
 
-    <p>i might start doing taco tuesday updates if i have time</p>
+        <li>i might start doing taco tuesday updates if i have time</li>
 
-    <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
+        <li>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</li>
 
-    <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
+        <li>i have NO COLLABORATORS on this project and everything is operated by me</li>
 
-    <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
+        <li>on the suggestion form please put a real name</li>
 
-    <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
+        <li>Do. Not. Spam. The. Form.</li>
 
-    <p>so grateful for all of you supporting this and i will see you next update!</p>
+        <li>so grateful for all of you supporting this and i will see you next update!</li>
 
-    <p>-everyone's favorite owner 🙂</p>
+        <li>-everyone's favorite owner 🙂</li>
+      </ul>
+    </section>
+
   </main>
 
 <script>
-  function showLog(key){
-    // only one version right now — future-proof hook
-    if(key === 'v11'){
-      // focus main content for accessibility
-      document.getElementById('content').focus();
-      // content already loaded by default — no fetch needed
-    }
+  function showLog(id){
+    document.querySelectorAll('.log').forEach(l => l.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    document.getElementById('content').focus();
   }
-  // load v1.1 by default
-  document.addEventListener('DOMContentLoaded', ()=>{ showLog('v11'); });
+
+  // Auto-load MOST RECENT LOG (bottom-most .log)
+  document.addEventListener('DOMContentLoaded', () => {
+    const logs = document.querySelectorAll('.log');
+    if (logs.length > 0) {
+      const latest = logs[logs.length - 1].id;
+      showLog(latest);
+    }
+  });
 </script>
 
 </body>
