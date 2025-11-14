@@ -1,126 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update Countdown</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Changelog</title>
+<style>
+  :root{
+    --bg:#0b0e14;
+    --card-bg:#1a1f27;
+    --card-hover:#232933;
+    --accent:#00d1ff;
+    --text:#e5e5e5;
+    --subtitle:#9aa0a6;
+  }
 
-        .navbar {
-            background-color: #161b22;
-            padding: 15px;
-            text-align: center;
-            font-size: 24px;
-            border-bottom: 2px solid #21262d;
-        }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:"Inter", Arial, sans-serif}
 
-        .container {
-            padding: 20px;
-            max-width: 600px;
-            margin: auto;
-            text-align: center;
-        }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+  }
 
-        .card {
-            background-color: #161b22;
-            border: 1px solid #21262d;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-        }
+  /* Sidebar */
+  .sidebar{
+    width:260px;
+    background:var(--card-bg);
+    height:100vh;
+    padding:20px;
+    box-sizing:border-box;
+    border-right:1px solid #2c3440;
+  }
 
-        .btn {
-            display: block;
-            width: 100%;
-            background-color: #21262d;
-            color: #58a6ff;
-            padding: 12px;
-            margin-top: 10px;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            font-size: 18px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
+  .sidebar h2{
+    color:var(--accent);
+    margin-bottom:15px;
+    font-size:1.6rem;
+    text-align:center;
+  }
 
-        .btn:hover {
-            background-color: #30363d;
-        }
+  .version-link{
+    display:block;
+    padding:12px;
+    border-radius:10px;
+    background:#161b22;
+    color:var(--text);
+    text-decoration:none;
+    margin-bottom:10px;
+    border:1px solid #2c3440;
+    transition:0.18s ease;
+  }
 
-        #countdown {
-            font-size: 28px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-    </style>
+  .version-link:hover{ background:var(--card-hover); transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+
+  .home-btn{
+    display:block;
+    margin-top:18px;
+    padding:10px;
+    text-align:center;
+    border-radius:8px;
+    background:#121418;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid #2c3440;
+  }
+  .home-btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+
+  /* Content */
+  .content{
+    flex:1;
+    padding:34px;
+    overflow-y:auto;
+  }
+
+  h1{
+    font-size:2rem;
+    color:var(--accent);
+    margin-bottom:8px;
+  }
+
+  h3{ color:var(--accent); margin-top:22px; margin-bottom:8px; font-size:1.05rem; }
+
+  p, li{
+    color:var(--text);
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  ol{ margin-left:20px; }
+
+  .top-links{
+    display:flex;
+    gap:10px;
+    margin-bottom:18px;
+  }
+
+  .btn{
+    background:var(--card-bg);
+    padding:9px 12px;
+    border-radius:8px;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid #2c3440;
+    font-weight:600;
+  }
+  .btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+
+  @media (max-width:800px){
+    .sidebar{ display:none; }
+    body{ padding:20px 0; }
+    .content{ padding:20px; }
+  }
+</style>
 </head>
 <body>
 
-    <div class="navbar">
-        Weekly Update Countdown
+  <!-- Sidebar -->
+  <div class="sidebar" role="navigation" aria-label="Changelog versions">
+    <h2>Changelogs</h2>
+
+    <a class="version-link" href="#" onclick="showLog('v11'); return false;">v1.1 — 11/14/2025</a>
+
+    <a class="home-btn" href="https://codingiscool464.github.io" target="_blank">⬅ Back to Home</a>
+  </div>
+
+  <!-- Main content -->
+  <main class="content" id="content" role="main" tabindex="0">
+    <div class="top-links">
+      <a class="btn" href="https://codingiscool464.github.io/suggestionform/" target="_blank">Suggestions</a>
+      <a class="btn" href="https://codingiscool464.github.io/updatecountdown" target="_blank">Update Countdown</a>
     </div>
 
-    <div class="container">
+    <h1>v1.1 — 11/14/2025</h1>
 
-        <div class="card">
-            <h2>Next Update</h2>
-            <div id="countdown">Loading...</div>
-        </div>
+    <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
 
-        <!-- Suggestions button -->
-        <a class="btn" href="https://codingiscool464.github.io/suggestions">Suggestions</a>
+    <h3>GAME ADDITIONS:</h3>
+    <ol>
+      <li>Drive Mad</li>
+      <li>Drift Boss</li>
+    </ol>
 
-        <!-- Changelogs button (middle) -->
-        <a class="btn" href="https://codingiscool464.github.io/changelogs">Changelogs</a>
+    <h3>OTHER ADDITIONS:</h3>
+    <ol>
+      <li>Added suggestions form for visitors to express their thoughts on the site.</li>
+      <li>Added update countdown for our weekly updates.</li>
+      <li>Added this changelog page!</li>
+    </ol>
 
-        <!-- Back to home button -->
-        <a class="btn" href="https://codingiscool464.github.io">Back to Home</a>
+    <h3>NOTES FROM THE OWNER:</h3>
+    <p>weekly updates will now occur on Fridays at 1pm<br>
+    (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
 
-    </div>
+    <p>i might start doing taco tuesday updates if i have time</p>
 
-    <script>
-        function getNextFridayAt1PM() {
-            const now = new Date();
-            const result = new Date();
-            
-            result.setDate(now.getDate() + ((5 - now.getDay() + 7) % 7)); 
-            result.setHours(13, 0, 0, 0);
+    <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
 
-            if (result < now) {
-                result.setDate(result.getDate() + 7);
-            }
+    <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
 
-            return result;
-        }
+    <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
 
-        function updateCountdown() {
-            const deadline = getNextFridayAt1PM();
-            const now = new Date();
-            const diff = deadline - now;
+    <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
 
-            if (diff <= 0) {
-                document.getElementById("countdown").innerHTML = "Update Time!";
-                return;
-            }
+    <p>so grateful for all of you supporting this and i will see you next update!</p>
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((diff / (1000 * 60)) % 60);
-            const seconds = Math.floor((diff / 1000) % 60);
+    <p>-everyone's favorite owner 🙂</p>
+  </main>
 
-            document.getElementById("countdown").innerHTML =
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+<script>
+  function showLog(key){
+    // only one version right now — future-proof hook
+    if(key === 'v11'){
+      // focus main content for accessibility
+      document.getElementById('content').focus();
+      // content already loaded by default — no fetch needed
+    }
+  }
+  // load v1.1 by default
+  document.addEventListener('DOMContentLoaded', ()=>{ showLog('v11'); });
+</script>
 
 </body>
 </html>
