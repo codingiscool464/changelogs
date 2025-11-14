@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changelog</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: #fff;
+        display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        background: #181818;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        border-right: 2px solid #222;
+    }
+
+    .sidebar h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .sidebar a {
+        display: block;
+        background: #222;
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: white;
+        transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+        background: #333;
+    }
+
+    /* Main content */
+    .content {
+        flex: 1;
+        padding: 30px;
+        overflow-y: auto;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 28px;
+    }
+
+    h3 {
+        margin-bottom: 5px;
+        margin-top: 25px;
+        font-size: 20px;
+        color: #0af;
+    }
+
+    ol {
+        margin-left: 20px;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Changelogs</h2>
+    <a href="#" onclick="showLog('v11')">v1.1 — 11/14/2025</a>
+
+    <br><br>
+    <a href="https://codingiscool464.github.io" style="background:#0a0;">⬅ Back to Home</a>
+</div>
+
+<!-- Main Content -->
+<div class="content" id="content">
+    <h2>Select a changelog from the left.</h2>
+</div>
+
+<script>
+    function showLog(version) {
+        let content = document.getElementById("content");
+
+        if (version === "v11") {
+            content.innerHTML = `
+                <h2>v1.1 — 11/14/2025</h2>
+                <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
+
+                <h3>GAME ADDITIONS:</h3>
+                <ol>
+                    <li>Drive Mad</li>
+                    <li>Drift Boss</li>
+                </ol>
+
+                <h3>OTHER ADDITIONS:</h3>
+                <ol>
+                    <li>Added suggestions form for visitors to express their thoughts on the site.</li>
+                    <li>Added update countdown for our weekly updates.</li>
+                    <li>Added this changelog page!</li>
+                </ol>
+
+                <h3>NOTES FROM THE OWNER:</h3>
+                <p>weekly updates will now occur on Fridays at 1pm<br>
+                (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
+
+                <p>i might start doing taco tuesday updates if i have time</p>
+
+                <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
+
+                <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
+
+                <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
+
+                <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
+
+                <p>so grateful for all of you supporting this and i will see you next update!</p>
+
+                <p>-WM</p>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>
