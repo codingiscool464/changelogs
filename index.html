@@ -1,151 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Changelog</title>
-
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0d0d0f; /* your site background */
-        color: white;
-        display: flex;
-    }
+  :root{
+    --bg:#0b0e14;
+    --card-bg:#1a1f27;
+    --card-hover:#232933;
+    --accent:#00d1ff;
+    --text:#e5e5e5;
+    --subtitle:#9aa0a6;
+  }
 
-    /* Sidebar */
-    .sidebar {
-        width: 260px;
-        background: #151518; /* dark card color */
-        height: 100vh;
-        padding: 20px;
-        box-sizing: border-box;
-        border-right: 2px solid #1f1f22;
-    }
+  *{box-sizing:border-box;margin:0;padding:0;font-family:"Inter", Arial, sans-serif}
 
-    .sidebar h2 {
-        text-align: center;
-        margin-top: 0;
-        font-size: 24px;
-        color: #4da3ff; /* your accent blue */
-    }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    display:flex;
+    min-height:100vh;
+  }
 
-    .sidebar a {
-        display: block;
-        background: #1c1c20;
-        color: white;
-        padding: 12px;
-        margin: 10px 0;
-        border-radius: 10px;
-        text-decoration: none;
-        transition: 0.2s;
-        border: 1px solid #232327;
-    }
+  /* Sidebar */
+  .sidebar{
+    width:260px;
+    background:var(--card-bg);
+    height:100vh;
+    padding:20px;
+    box-sizing:border-box;
+    border-right:1px solid #2c3440;
+  }
 
-    .sidebar a:hover {
-        background: #242428;
-    }
+  .sidebar h2{
+    color:var(--accent);
+    margin-bottom:15px;
+    font-size:1.6rem;
+    text-align:center;
+  }
 
-    .home-btn {
-        background: #004aad !important;
-        border: 1px solid #003f94 !important;
-        text-align: center;
-    }
+  .version-link{
+    display:block;
+    padding:12px;
+    border-radius:10px;
+    background:#161b22;
+    color:var(--text);
+    text-decoration:none;
+    margin-bottom:10px;
+    border:1px solid #2c3440;
+    transition:0.18s ease;
+  }
 
-    .home-btn:hover {
-        background: #0058c4 !important;
-    }
+  .version-link:hover{ background:var(--card-hover); transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
 
-    /* Main content */
-    .content {
-        flex: 1;
-        padding: 30px;
-        overflow-y: auto;
-    }
+  .home-btn{
+    display:block;
+    margin-top:18px;
+    padding:10px;
+    text-align:center;
+    border-radius:8px;
+    background:#121418;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid #2c3440;
+  }
+  .home-btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
 
-    h2 {
-        font-size: 28px;
-        color: #4da3ff; /* accent blue */
-    }
+  /* Content */
+  .content{
+    flex:1;
+    padding:34px;
+    overflow-y:auto;
+  }
 
-    h3 {
-        font-size: 20px;
-        margin-top: 30px;
-        color: #4da3ff;
-    }
+  h1{
+    font-size:2rem;
+    color:var(--accent);
+    margin-bottom:8px;
+  }
 
-    p, li {
-        font-size: 16px;
-        line-height: 1.6;
-    }
+  h3{ color:var(--accent); margin-top:22px; margin-bottom:8px; font-size:1.05rem; }
 
+  p, li{
+    color:var(--text);
+    font-size:16px;
+    line-height:1.6;
+  }
+
+  ol{ margin-left:20px; }
+
+  .top-links{
+    display:flex;
+    gap:10px;
+    margin-bottom:18px;
+  }
+
+  .btn{
+    background:var(--card-bg);
+    padding:9px 12px;
+    border-radius:8px;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid #2c3440;
+    font-weight:600;
+  }
+  .btn:hover{ background:var(--card-hover); box-shadow:0 6px 18px rgba(0,209,255,0.06); }
+
+  @media (max-width:800px){
+    .sidebar{ display:none; }
+    body{ padding:20px 0; }
+    .content{ padding:20px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- Sidebar -->
-<div class="sidebar">
+  <!-- Sidebar -->
+  <div class="sidebar" role="navigation" aria-label="Changelog versions">
     <h2>Changelogs</h2>
 
-    <a href="#" onclick="showLog('v11')">v1.1 — 11/14/2025</a>
+    <a class="version-link" href="#" onclick="showLog('v11'); return false;">v1.1 — 11/14/2025</a>
 
-    <br><br>
+    <a class="home-btn" href="https://codingiscool464.github.io" target="_blank">⬅ Back to Home</a>
+  </div>
 
-    <a class="home-btn" href="https://codingiscool464.github.io">⬅ Back to Home</a>
-</div>
+  <!-- Main content -->
+  <main class="content" id="content" role="main" tabindex="0">
+    <div class="top-links">
+      <a class="btn" href="https://codingiscool464.github.io/suggestionform/" target="_blank">Suggestions</a>
+      <a class="btn" href="https://codingiscool464.github.io/updatecountdown" target="_blank">Update Countdown</a>
+    </div>
 
-<!-- Content -->
-<div class="content" id="content">
-    <h2>Select a changelog from the left.</h2>
-</div>
+    <h1>v1.1 — 11/14/2025</h1>
+
+    <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
+
+    <h3>GAME ADDITIONS:</h3>
+    <ol>
+      <li>Drive Mad</li>
+      <li>Drift Boss</li>
+    </ol>
+
+    <h3>OTHER ADDITIONS:</h3>
+    <ol>
+      <li>Added suggestions form for visitors to express their thoughts on the site.</li>
+      <li>Added update countdown for our weekly updates.</li>
+      <li>Added this changelog page!</li>
+    </ol>
+
+    <h3>NOTES FROM THE OWNER:</h3>
+    <p>weekly updates will now occur on Fridays at 1pm<br>
+    (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
+
+    <p>i might start doing taco tuesday updates if i have time</p>
+
+    <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
+
+    <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
+
+    <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
+
+    <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
+
+    <p>so grateful for all of you supporting this and i will see you next update!</p>
+
+    <p>-WM</p>
+  </main>
 
 <script>
-function showLog(version) {
-
-    let content = document.getElementById("content");
-
-    if (version === "v11") {
-
-        content.innerHTML = `
-            <h2>v1.1 — 11/14/2025</h2>
-
-            <p>hello everyone! so glad that all of you are supporting my personal coding project, and without further yap from me, this is the change log for v1.1 of codingiscool464.github.io!</p>
-
-            <h3>GAME ADDITIONS:</h3>
-            <ol>
-                <li>Drive Mad</li>
-                <li>Drift Boss</li>
-            </ol>
-
-            <h3>OTHER ADDITIONS:</h3>
-            <ol>
-                <li>Added suggestions form for visitors to express their thoughts on the site.</li>
-                <li>Added update countdown for our weekly updates.</li>
-                <li>Added this changelog page!</li>
-            </ol>
-
-            <h3>NOTES FROM THE OWNER:</h3>
-
-            <p>weekly updates will now occur on Fridays at 1pm<br>
-            (note for this week: we have a no tech day on 11/21 so i will decide whether to do the update on thursday or push it out on sat/sun so its ready for monday)</p>
-
-            <p>i might start doing taco tuesday updates if i have time</p>
-
-            <p>when you submit the suggestion form, you might think i delete your submission right away but i actually save every one in a seperate folder and i read them during the week and plan for friday’s update</p>
-
-            <p>i have NO COLLABORATORS on this project and everything is operated by me, such as maintaining the website’s uptime, finding game source code, forking, deploying, and then adding the game card to the launcher</p>
-
-            <p>on the suggestion form please try and put a real name (not albert or pavlov) so i know who to talk to about the additions in the next update!</p>
-
-            <p>Do. Not. Spam. The. Form. (submitting same thing twice, just spamming messages to me, etc.)</p>
-
-            <p>so grateful for all of you supporting this and i will see you next update!</p>
-
-            <p>-WM</p>
-        `;
+  function showLog(key){
+    // only one version right now — future-proof hook
+    if(key === 'v11'){
+      // focus main content for accessibility
+      document.getElementById('content').focus();
+      // content already loaded by default — no fetch needed
     }
-}
+  }
+  // load v1.1 by default
+  document.addEventListener('DOMContentLoaded', ()=>{ showLog('v11'); });
 </script>
 
 </body>
